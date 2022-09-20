@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Lizaakishina/express-mesto-gha/issues"
   },
-  "homepage": "https://github.com/Lizaakishina/express-mesto-gha#readme"
+  "homepage": "https://github.com/Lizaakishina/express-mesto-gha#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0"
+  }
 }

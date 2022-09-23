@@ -1,5 +1,5 @@
 const Users = require('../models/user');
-const { NotFoundError } = require('../errors/Errors');
+const { NotFoundError } = require('../errors/Error');
 const {
   SERVER_ERROR_CODE,
   SERVER_ERROR_MESSAGE,
@@ -56,7 +56,7 @@ module.exports.updateUser = (req, res) => {
     .catch((err) => {
       if (err.name === 'ValidationError') {
         res.status(INCORRECT_DATA_CODE).send({ message: INCORRECT_DATA_CODE_MESSAGE });
-      } else if (err.name === 'CastError') {
+      } else if (err.name === 'NotFound') {
         res.status(NOT_FOUND_CODE).send({ message: 'Пользователь с указанным id не найден' });
       } else {
         res.status(SERVER_ERROR_CODE).send({ message: SERVER_ERROR_MESSAGE });
@@ -79,7 +79,7 @@ module.exports.updateAvatarUser = (req, res) => {
     .catch((err) => {
       if (err.name === 'ValidationError') {
         res.status(INCORRECT_DATA_CODE).send({ message: INCORRECT_DATA_CODE_MESSAGE });
-      } else if (err.name === 'CastError') {
+      } else if (err.name === 'NotFound') {
         res.status(NOT_FOUND_CODE).send({ message: 'Пользователь с указанным id не найден' });
       } else {
         res.status(SERVER_ERROR_CODE).send({ message: SERVER_ERROR_MESSAGE });

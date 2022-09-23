@@ -1,5 +1,5 @@
-const Cards = require('../models/card');
-const { NotFoundError } = require('../errors/Errors');
+const Cards = require('../models/cards');
+const { NotFoundError } = require('../errors/Error');
 const {
   SERVER_ERROR_CODE,
   SERVER_ERROR_MESSAGE,

@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Lizaakishina/express-mesto-gha.git"
   },
-  "author": "",
+  "author": "Akishina Elizaveta",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Lizaakishina/express-mesto-gha/issues"
@@ -31,7 +31,6 @@
     "celebrate": "^15.0.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.6.1",
